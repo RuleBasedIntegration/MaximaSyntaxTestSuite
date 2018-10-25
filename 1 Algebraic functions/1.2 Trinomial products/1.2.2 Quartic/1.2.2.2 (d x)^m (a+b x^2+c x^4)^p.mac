@@ -229,7 +229,7 @@ lst: '[
 [x^8/(b*x^2+c*x^4)^2,x,4,3/2*x/c^2-1/2*x^3/(c*(b+c*x^2))-3/2*atan(x*sqrt(c)/sqrt(b))*sqrt(b)/c^(5/2)],
 [x^7/(b*x^2+c*x^4)^2,x,4,1/2*b/(c^2*(b+c*x^2))+1/2*log(b+c*x^2)/c^2],
 [x^6/(b*x^2+c*x^4)^2,x,3,-1/2*x/(c*(b+c*x^2))+1/2*atan(x*sqrt(c)/sqrt(b))/(c^(3/2)*sqrt(b))],
-[x^5/(b*x^2+c*x^4)^2,x,1,-1/2*x^2/(c*(b*x^2+c*x^4))],
+[x^5/(b*x^2+c*x^4)^2,x,2,(-1/2)/(c*(b+c*x^2))],
 [x^4/(b*x^2+c*x^4)^2,x,3,1/2*x/(b*(b+c*x^2))+1/2*atan(x*sqrt(c)/sqrt(b))/(b^(3/2)*sqrt(c))],
 [x^3/(b*x^2+c*x^4)^2,x,4,1/2/(b*(b+c*x^2))+log(x)/b^2-1/2*log(b+c*x^2)/b^2],
 [x^2/(b*x^2+c*x^4)^2,x,4,(-3/2)/(b^2*x)+1/2/(b*x*(b+c*x^2))-3/2*atan(x*sqrt(c)/sqrt(b))*sqrt(c)/b^(5/2)],
@@ -244,7 +244,7 @@ lst: '[
 [x^10/(b*x^2+c*x^4)^3,x,4,-1/4*x^3/(c*(b+c*x^2)^2)-3/8*x/(c^2*(b+c*x^2))+3/8*atan(x*sqrt(c)/sqrt(b))/(c^(5/2)*sqrt(b))],
 [x^9/(b*x^2+c*x^4)^3,x,2,1/4*x^4/(b*(b+c*x^2)^2)],
 [x^8/(b*x^2+c*x^4)^3,x,4,-1/4*x/(c*(b+c*x^2)^2)+1/8*x/(b*c*(b+c*x^2))+1/8*atan(x*sqrt(c)/sqrt(b))/(b^(3/2)*c^(3/2))],
-[x^7/(b*x^2+c*x^4)^3,x,1,-1/4*x^4/(c*(b*x^2+c*x^4)^2)],
+[x^7/(b*x^2+c*x^4)^3,x,2,(-1/4)/(c*(b+c*x^2)^2)],
 [x^6/(b*x^2+c*x^4)^3,x,4,1/4*x/(b*(b+c*x^2)^2)+3/8*x/(b^2*(b+c*x^2))+3/8*atan(x*sqrt(c)/sqrt(b))/(b^(5/2)*sqrt(c))],
 [x^5/(b*x^2+c*x^4)^3,x,4,1/4/(b*(b+c*x^2)^2)+1/2/(b^2*(b+c*x^2))+log(x)/b^3-1/2*log(b+c*x^2)/b^3],
 [x^4/(b*x^2+c*x^4)^3,x,5,(-15/8)/(b^3*x)+1/4/(b*x*(b+c*x^2)^2)+5/8/(b^2*x*(b+c*x^2))-15/8*atan(x*sqrt(c)/sqrt(b))*sqrt(c)/b^(7/2)],
@@ -455,12 +455,12 @@ lst: '[
 [1/(x^(5/2)*(b*x^2+c*x^4)^(3/2)),x,9,1/(b*x^(7/2)*sqrt(b*x^2+c*x^4))+77/15*c^(5/2)*x^(3/2)*(b+c*x^2)/(b^4*(sqrt(b)+x*sqrt(c))*sqrt(b*x^2+c*x^4))-11/9*sqrt(b*x^2+c*x^4)/(b^2*x^(11/2))+77/45*c*sqrt(b*x^2+c*x^4)/(b^3*x^(7/2))-77/15*c^2*sqrt(b*x^2+c*x^4)/(b^4*x^(3/2))-77/15*c^(9/4)*x*elliptic_e(2*atan(c^(1/4)*sqrt(x)/b^(1/4)),1/2)*(sqrt(b)+x*sqrt(c))*sqrt((b+c*x^2)/(sqrt(b)+x*sqrt(c))^2)/(b^(15/4)*sqrt(b*x^2+c*x^4))+77/30*c^(9/4)*x*elliptic_f(2*atan(c^(1/4)*sqrt(x)/b^(1/4)),1/2)*(sqrt(b)+x*sqrt(c))*sqrt((b+c*x^2)/(sqrt(b)+x*sqrt(c))^2)/(b^(15/4)*sqrt(b*x^2+c*x^4))],
 
 /* Integrands of the form x^m (b x^2+c x^4)^p with m symbolic */
-[(c*x)^m*(b*x^2+c*x^4)^3,x,4,b^3*(c*x)^(7+m)/(c^7*(7+m))+3*b^2*(c*x)^(9+m)/(c^8*(9+m))+3*b*(c*x)^(11+m)/(c^9*(11+m))+(c*x)^(13+m)/(c^10*(13+m))],
-[(c*x)^m*(b*x^2+c*x^4)^2,x,4,b^2*(c*x)^(5+m)/(c^5*(5+m))+2*b*(c*x)^(7+m)/(c^6*(7+m))+(c*x)^(9+m)/(c^7*(9+m))],
+[(c*x)^m*(b*x^2+c*x^4)^3,x,4,b^3*x^7*(c*x)^m/(7+m)+3*b^2*c*x^9*(c*x)^m/(9+m)+3*b*c^2*x^11*(c*x)^m/(11+m)+c^3*x^13*(c*x)^m/(13+m)],
+[(c*x)^m*(b*x^2+c*x^4)^2,x,4,b^2*x^5*(c*x)^m/(5+m)+2*b*c*x^7*(c*x)^m/(7+m)+c^2*x^9*(c*x)^m/(9+m)],
 [(c*x)^m*(b*x^2+c*x^4),x,2,b*(c*x)^(3+m)/(c^3*(3+m))+(c*x)^(5+m)/(c^4*(5+m))],
-[(c*x)^m/(b*x^2+c*x^4),x,3,-c*(c*x)^(-1+m)*hypergeometric([1,1/2*(-1+m)],[1/2*(1+m)],-c*x^2/b)/(b*(1-m))],
-[(c*x)^m/(b*x^2+c*x^4)^2,x,3,-c^3*(c*x)^(-3+m)*hypergeometric([2,1/2*(-3+m)],[1/2*(-1+m)],-c*x^2/b)/(b^2*(3-m))],
-[(c*x)^m/(b*x^2+c*x^4)^3,x,3,-c^5*(c*x)^(-5+m)*hypergeometric([3,1/2*(-5+m)],[1/2*(-3+m)],-c*x^2/b)/(b^3*(5-m))],
+[(c*x)^m/(b*x^2+c*x^4),x,3,-(c*x)^m*hypergeometric([1,1/2*(-1+m)],[1/2*(1+m)],-c*x^2/b)/(b*(1-m)*x)],
+[(c*x)^m/(b*x^2+c*x^4)^2,x,3,-(c*x)^m*hypergeometric([2,1/2*(-3+m)],[1/2*(-1+m)],-c*x^2/b)/(b^2*(3-m)*x^3)],
+[(c*x)^m/(b*x^2+c*x^4)^3,x,3,-(c*x)^m*hypergeometric([3,1/2*(-5+m)],[1/2*(-3+m)],-c*x^2/b)/(b^3*(5-m)*x^5)],
 
 /* Integrands of the form (d x)^m (a+b x^2+c x^4)^p with b^2-4 a c=0 */
 
